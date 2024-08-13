@@ -12,6 +12,7 @@ const getAllPokemon = async (req, res) => {
 
 // Get Pokémon by name
 const getPokemonByName = async (req, res) => {
+    console.log('Request received for:', req.params.name); // Log request parameter
     try {
         const pokemon = await Pokemon.findOne({ name: req.params.name.toLowerCase() });
         if (pokemon) {
@@ -20,6 +21,7 @@ const getPokemonByName = async (req, res) => {
             res.status(404).json({ message: 'Pokémon not found' });
         }
     } catch (err) {
+        console.error('Error:', err.message); // Log error details
         res.status(500).json({ message: err.message });
     }
 };
