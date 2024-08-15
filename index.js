@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const pokemonRoutes = require('./routes/pokemon');
+const typesRoutes = require('./routes/Types');
+const trainersRoutes = require('./routes/Trainers');
 // const updateTrainersWithPokemons = require('./utils/givePokemonToTrainers'); // Adjust path if needed
 const SetupRatings = require('./utils/SetupBasicRatingForTrainers'); // Adjust path if needed
 
@@ -28,6 +30,8 @@ app.use(express.json());
 
 // Routes
 app.use('/api/pokemon', pokemonRoutes);
+app.use('/api/types', typesRoutes);
+app.use('/api/trainers', trainersRoutes);
 
 // Start server
 app.listen(port, () => {
