@@ -26,6 +26,7 @@ exports.registerUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
   try {
     const { username, password } = req.body;
+    console.log(username)
 
     const user = await User.findOne({ username });
     if (!user) {
@@ -41,6 +42,7 @@ exports.loginUser = async (req, res) => {
     res.status(200).json({ token });
   } catch (error) {
     res.status(500).json({ message: 'Error logging in', error });
+    console.log(error)
   }
 };
 
