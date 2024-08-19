@@ -66,3 +66,17 @@ exports.updateUserStats = async (userId, isWin, isChampion = false) => {
     console.error('Error updating user stats:', error);
   }
 };
+
+exports.checkLogin = (req, res) => {
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+  if (!token) {
+    return res.status(401).json({ message: 'No token provided' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    res.status(200).json({ message: 'Login is valid', userId: decoded.userId });
+  } catch (error) {
+    res.status(401).json({ message: 'Invalid or expired token', error });
+  }
+};
