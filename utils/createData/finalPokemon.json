@@ -53,6 +53,59 @@
     ]
   },
   {
+    "name": "raticate",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/20.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
     "name": "fearow",
     "type": "flying",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
@@ -159,11 +212,329 @@
     ]
   },
   {
+    "name": "persian",
+    "type": "fairy",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/53.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/53.ogg",
+    "moves": [
+      {
+        "name": "sweet-kiss",
+        "url": "https://pokeapi.co/api/v2/move/186/",
+        "type": "fairy",
+        "dmg": 131,
+        "acc": 75,
+        "sp": 20,
+        "effect": "attack down",
+        "effect_acc": 92,
+        "effect_percent": 13
+      },
+      {
+        "name": "charm",
+        "url": "https://pokeapi.co/api/v2/move/204/",
+        "type": "fairy",
+        "dmg": 125,
+        "acc": 32,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 20
+      },
+      {
+        "name": "moonlight",
+        "url": "https://pokeapi.co/api/v2/move/236/",
+        "type": "fairy",
+        "dmg": 144,
+        "acc": 96,
+        "sp": 18,
+        "effect": "melt",
+        "effect_acc": 95,
+        "effect_percent": 18
+      },
+      {
+        "name": "disarming-voice",
+        "url": "https://pokeapi.co/api/v2/move/574/",
+        "type": "fairy",
+        "dmg": 18,
+        "acc": 74,
+        "sp": 10,
+        "effect": "attack down",
+        "effect_acc": 60,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
     "name": "dodrio",
     "type": "flying",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/85.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/85.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "kangaskhan",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/115.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/115.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "tauros",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/128.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/128.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "ditto",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/132.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "snorlax",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/143.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/143.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "furret",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/162.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/162.ogg",
     "moves": [
       {
         "name": "gust",
@@ -265,11 +636,541 @@
     ]
   },
   {
+    "name": "smeargle",
+    "type": "psychic",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/235.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/235.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/235.ogg",
+    "moves": [
+      {
+        "name": "psybeam",
+        "url": "https://pokeapi.co/api/v2/move/60/",
+        "type": "psychic",
+        "dmg": 47,
+        "acc": 34,
+        "sp": 14,
+        "effect": "defense down",
+        "effect_acc": 93,
+        "effect_percent": 27
+      },
+      {
+        "name": "confusion",
+        "url": "https://pokeapi.co/api/v2/move/93/",
+        "type": "psychic",
+        "dmg": 29,
+        "acc": 78,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 86,
+        "effect_percent": 64
+      },
+      {
+        "name": "psychic",
+        "url": "https://pokeapi.co/api/v2/move/94/",
+        "type": "psychic",
+        "dmg": 133,
+        "acc": 86,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 54,
+        "effect_percent": 12
+      },
+      {
+        "name": "hypnosis",
+        "url": "https://pokeapi.co/api/v2/move/95/",
+        "type": "psychic",
+        "dmg": 42,
+        "acc": 62,
+        "sp": 10,
+        "effect": "defense up",
+        "effect_acc": 51,
+        "effect_percent": 36
+      }
+    ]
+  },
+  {
+    "name": "miltank",
+    "type": "psychic",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/241.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/241.ogg",
+    "moves": [
+      {
+        "name": "psybeam",
+        "url": "https://pokeapi.co/api/v2/move/60/",
+        "type": "psychic",
+        "dmg": 47,
+        "acc": 34,
+        "sp": 14,
+        "effect": "defense down",
+        "effect_acc": 93,
+        "effect_percent": 27
+      },
+      {
+        "name": "confusion",
+        "url": "https://pokeapi.co/api/v2/move/93/",
+        "type": "psychic",
+        "dmg": 29,
+        "acc": 78,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 86,
+        "effect_percent": 64
+      },
+      {
+        "name": "psychic",
+        "url": "https://pokeapi.co/api/v2/move/94/",
+        "type": "psychic",
+        "dmg": 133,
+        "acc": 86,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 54,
+        "effect_percent": 12
+      },
+      {
+        "name": "hypnosis",
+        "url": "https://pokeapi.co/api/v2/move/95/",
+        "type": "psychic",
+        "dmg": 42,
+        "acc": 62,
+        "sp": 10,
+        "effect": "defense up",
+        "effect_acc": 51,
+        "effect_percent": 36
+      }
+    ]
+  },
+  {
+    "name": "blissey",
+    "type": "psychic",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/242.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/242.ogg",
+    "moves": [
+      {
+        "name": "psybeam",
+        "url": "https://pokeapi.co/api/v2/move/60/",
+        "type": "psychic",
+        "dmg": 47,
+        "acc": 34,
+        "sp": 14,
+        "effect": "defense down",
+        "effect_acc": 93,
+        "effect_percent": 27
+      },
+      {
+        "name": "confusion",
+        "url": "https://pokeapi.co/api/v2/move/93/",
+        "type": "psychic",
+        "dmg": 29,
+        "acc": 78,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 86,
+        "effect_percent": 64
+      },
+      {
+        "name": "psychic",
+        "url": "https://pokeapi.co/api/v2/move/94/",
+        "type": "psychic",
+        "dmg": 133,
+        "acc": 86,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 54,
+        "effect_percent": 12
+      },
+      {
+        "name": "hypnosis",
+        "url": "https://pokeapi.co/api/v2/move/95/",
+        "type": "psychic",
+        "dmg": 42,
+        "acc": 62,
+        "sp": 10,
+        "effect": "defense up",
+        "effect_acc": 51,
+        "effect_percent": 36
+      }
+    ]
+  },
+  {
     "name": "swellow",
     "type": "flying",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/277.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/277.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/277.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "slaking",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/289.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/289.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "exploud",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/295.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/295.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/295.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "delcatty",
+    "type": "fairy",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/301.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/301.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/301.ogg",
+    "moves": [
+      {
+        "name": "sweet-kiss",
+        "url": "https://pokeapi.co/api/v2/move/186/",
+        "type": "fairy",
+        "dmg": 131,
+        "acc": 75,
+        "sp": 20,
+        "effect": "attack down",
+        "effect_acc": 92,
+        "effect_percent": 13
+      },
+      {
+        "name": "charm",
+        "url": "https://pokeapi.co/api/v2/move/204/",
+        "type": "fairy",
+        "dmg": 125,
+        "acc": 32,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 20
+      },
+      {
+        "name": "moonlight",
+        "url": "https://pokeapi.co/api/v2/move/236/",
+        "type": "fairy",
+        "dmg": 144,
+        "acc": 96,
+        "sp": 18,
+        "effect": "melt",
+        "effect_acc": 95,
+        "effect_percent": 18
+      },
+      {
+        "name": "disarming-voice",
+        "url": "https://pokeapi.co/api/v2/move/574/",
+        "type": "fairy",
+        "dmg": 18,
+        "acc": 74,
+        "sp": 10,
+        "effect": "attack down",
+        "effect_acc": 60,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "spinda",
+    "type": "fairy",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/327.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/327.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/327.ogg",
+    "moves": [
+      {
+        "name": "sweet-kiss",
+        "url": "https://pokeapi.co/api/v2/move/186/",
+        "type": "fairy",
+        "dmg": 131,
+        "acc": 75,
+        "sp": 20,
+        "effect": "attack down",
+        "effect_acc": 92,
+        "effect_percent": 13
+      },
+      {
+        "name": "charm",
+        "url": "https://pokeapi.co/api/v2/move/204/",
+        "type": "fairy",
+        "dmg": 125,
+        "acc": 32,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 20
+      },
+      {
+        "name": "moonlight",
+        "url": "https://pokeapi.co/api/v2/move/236/",
+        "type": "fairy",
+        "dmg": 144,
+        "acc": 96,
+        "sp": 18,
+        "effect": "melt",
+        "effect_acc": 95,
+        "effect_percent": 18
+      },
+      {
+        "name": "disarming-voice",
+        "url": "https://pokeapi.co/api/v2/move/574/",
+        "type": "fairy",
+        "dmg": 18,
+        "acc": 74,
+        "sp": 10,
+        "effect": "attack down",
+        "effect_acc": 60,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "zangoose",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/335.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/335.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/335.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "castform",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/351.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/351.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/351.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "kecleon",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/352.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/352.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/352.ogg",
     "moves": [
       {
         "name": "gust",
@@ -424,6 +1325,165 @@
     ]
   },
   {
+    "name": "ambipom",
+    "type": "water",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/424.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/424.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/424.ogg",
+    "moves": [
+      {
+        "name": "water-gun",
+        "url": "https://pokeapi.co/api/v2/move/55/",
+        "type": "water",
+        "dmg": 15,
+        "acc": 54,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 57
+      },
+      {
+        "name": "hydro-pump",
+        "url": "https://pokeapi.co/api/v2/move/56/",
+        "type": "water",
+        "dmg": 30,
+        "acc": 64,
+        "sp": 8,
+        "effect": "attack down",
+        "effect_acc": 94,
+        "effect_percent": 72
+      },
+      {
+        "name": "surf",
+        "url": "https://pokeapi.co/api/v2/move/57/",
+        "type": "water",
+        "dmg": 42,
+        "acc": 96,
+        "sp": 5,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      },
+      {
+        "name": "bubble-beam",
+        "url": "https://pokeapi.co/api/v2/move/61/",
+        "type": "water",
+        "dmg": 45,
+        "acc": 69,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      }
+    ]
+  },
+  {
+    "name": "lopunny",
+    "type": "water",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/428.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/428.ogg",
+    "moves": [
+      {
+        "name": "water-gun",
+        "url": "https://pokeapi.co/api/v2/move/55/",
+        "type": "water",
+        "dmg": 15,
+        "acc": 54,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 57
+      },
+      {
+        "name": "hydro-pump",
+        "url": "https://pokeapi.co/api/v2/move/56/",
+        "type": "water",
+        "dmg": 30,
+        "acc": 64,
+        "sp": 8,
+        "effect": "attack down",
+        "effect_acc": 94,
+        "effect_percent": 72
+      },
+      {
+        "name": "surf",
+        "url": "https://pokeapi.co/api/v2/move/57/",
+        "type": "water",
+        "dmg": 42,
+        "acc": 96,
+        "sp": 5,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      },
+      {
+        "name": "bubble-beam",
+        "url": "https://pokeapi.co/api/v2/move/61/",
+        "type": "water",
+        "dmg": 45,
+        "acc": 69,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      }
+    ]
+  },
+  {
+    "name": "purugly",
+    "type": "water",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/432.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/432.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/432.ogg",
+    "moves": [
+      {
+        "name": "water-gun",
+        "url": "https://pokeapi.co/api/v2/move/55/",
+        "type": "water",
+        "dmg": 15,
+        "acc": 54,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 57
+      },
+      {
+        "name": "hydro-pump",
+        "url": "https://pokeapi.co/api/v2/move/56/",
+        "type": "water",
+        "dmg": 30,
+        "acc": 64,
+        "sp": 8,
+        "effect": "attack down",
+        "effect_acc": 94,
+        "effect_percent": 72
+      },
+      {
+        "name": "surf",
+        "url": "https://pokeapi.co/api/v2/move/57/",
+        "type": "water",
+        "dmg": 42,
+        "acc": 96,
+        "sp": 5,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      },
+      {
+        "name": "bubble-beam",
+        "url": "https://pokeapi.co/api/v2/move/61/",
+        "type": "water",
+        "dmg": 45,
+        "acc": 69,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      }
+    ]
+  },
+  {
     "name": "chatot",
     "type": "flying",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/441.png",
@@ -477,11 +1537,64 @@
     ]
   },
   {
-    "name": "unfezant",
+    "name": "lickilicky",
     "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/521.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/521.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/521.ogg",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/463.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/463.ogg",
+    "moves": [
+      {
+        "name": "gust",
+        "url": "https://pokeapi.co/api/v2/move/16/",
+        "type": "flying",
+        "dmg": 12,
+        "acc": 51,
+        "sp": 6,
+        "effect": "health up",
+        "effect_acc": 41,
+        "effect_percent": 12
+      },
+      {
+        "name": "wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/17/",
+        "type": "flying",
+        "dmg": 55,
+        "acc": 93,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 75
+      },
+      {
+        "name": "fly",
+        "url": "https://pokeapi.co/api/v2/move/19/",
+        "type": "flying",
+        "dmg": 123,
+        "acc": 76,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "peck",
+        "url": "https://pokeapi.co/api/v2/move/64/",
+        "type": "flying",
+        "dmg": 118,
+        "acc": 70,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 30,
+        "effect_percent": 65
+      }
+    ]
+  },
+  {
+    "name": "porygon-z",
+    "type": "flying",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/474.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/474.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/474.ogg",
     "moves": [
       {
         "name": "gust",
@@ -583,267 +1696,55 @@
     ]
   },
   {
-    "name": "braviary",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/628.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/628.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/628.ogg",
+    "name": "bouffalant",
+    "type": "grass",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/626.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/626.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/626.ogg",
     "moves": [
       {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
+        "name": "vine-whip",
+        "url": "https://pokeapi.co/api/v2/move/22/",
+        "type": "grass",
+        "dmg": 50,
+        "acc": 81,
+        "sp": 10,
+        "effect": "attack down",
+        "effect_acc": 80,
+        "effect_percent": 36
       },
       {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "diggersby",
-    "type": "ground",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/660.ogg",
-    "moves": [
-      {
-        "name": "sand-attack",
-        "url": "https://pokeapi.co/api/v2/move/28/",
-        "type": "ground",
-        "dmg": 40,
-        "acc": 57,
-        "sp": 20,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 33
-      },
-      {
-        "name": "earthquake",
-        "url": "https://pokeapi.co/api/v2/move/89/",
-        "type": "ground",
-        "dmg": 87,
-        "acc": 58,
-        "sp": 16,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "fissure",
-        "url": "https://pokeapi.co/api/v2/move/90/",
-        "type": "ground",
-        "dmg": 43,
-        "acc": 74,
-        "sp": 15,
-        "effect": "defense down",
-        "effect_acc": 83,
-        "effect_percent": 30
-      },
-      {
-        "name": "dig",
-        "url": "https://pokeapi.co/api/v2/move/91/",
-        "type": "ground",
+        "name": "absorb",
+        "url": "https://pokeapi.co/api/v2/move/71/",
+        "type": "grass",
         "dmg": 36,
-        "acc": 90,
-        "sp": 20,
+        "acc": 55,
+        "sp": 19,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 21
+      },
+      {
+        "name": "mega-drain",
+        "url": "https://pokeapi.co/api/v2/move/72/",
+        "type": "grass",
+        "dmg": 17,
+        "acc": 57,
+        "sp": 10,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 58
+      },
+      {
+        "name": "leech-seed",
+        "url": "https://pokeapi.co/api/v2/move/73/",
+        "type": "grass",
+        "dmg": 28,
+        "acc": 96,
+        "sp": 5,
         "effect": "melt",
-        "effect_acc": 82,
-        "effect_percent": 12
-      }
-    ]
-  },
-  {
-    "name": "pyroar",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/668.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
         "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "heliolisk",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/695.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/695.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "toucannon",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/733.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/733.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/733.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
+        "effect_percent": 6
       }
     ]
   },
@@ -954,11 +1855,223 @@
     ]
   },
   {
+    "name": "silvally",
+    "type": "psychic",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/773.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/773.ogg",
+    "moves": [
+      {
+        "name": "psybeam",
+        "url": "https://pokeapi.co/api/v2/move/60/",
+        "type": "psychic",
+        "dmg": 47,
+        "acc": 34,
+        "sp": 14,
+        "effect": "defense down",
+        "effect_acc": 93,
+        "effect_percent": 27
+      },
+      {
+        "name": "confusion",
+        "url": "https://pokeapi.co/api/v2/move/93/",
+        "type": "psychic",
+        "dmg": 29,
+        "acc": 78,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 86,
+        "effect_percent": 64
+      },
+      {
+        "name": "psychic",
+        "url": "https://pokeapi.co/api/v2/move/94/",
+        "type": "psychic",
+        "dmg": 133,
+        "acc": 86,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 54,
+        "effect_percent": 12
+      },
+      {
+        "name": "hypnosis",
+        "url": "https://pokeapi.co/api/v2/move/95/",
+        "type": "psychic",
+        "dmg": 42,
+        "acc": 62,
+        "sp": 10,
+        "effect": "defense up",
+        "effect_acc": 51,
+        "effect_percent": 36
+      }
+    ]
+  },
+  {
+    "name": "komala",
+    "type": "psychic",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/775.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/775.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/775.ogg",
+    "moves": [
+      {
+        "name": "psybeam",
+        "url": "https://pokeapi.co/api/v2/move/60/",
+        "type": "psychic",
+        "dmg": 47,
+        "acc": 34,
+        "sp": 14,
+        "effect": "defense down",
+        "effect_acc": 93,
+        "effect_percent": 27
+      },
+      {
+        "name": "confusion",
+        "url": "https://pokeapi.co/api/v2/move/93/",
+        "type": "psychic",
+        "dmg": 29,
+        "acc": 78,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 86,
+        "effect_percent": 64
+      },
+      {
+        "name": "psychic",
+        "url": "https://pokeapi.co/api/v2/move/94/",
+        "type": "psychic",
+        "dmg": 133,
+        "acc": 86,
+        "sp": 7,
+        "effect": "defense up",
+        "effect_acc": 54,
+        "effect_percent": 12
+      },
+      {
+        "name": "hypnosis",
+        "url": "https://pokeapi.co/api/v2/move/95/",
+        "type": "psychic",
+        "dmg": 42,
+        "acc": 62,
+        "sp": 10,
+        "effect": "defense up",
+        "effect_acc": 51,
+        "effect_percent": 36
+      }
+    ]
+  },
+  {
     "name": "drampa",
     "type": "dragon",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/780.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/780.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/780.ogg",
+    "moves": [
+      {
+        "name": "dragon-rage",
+        "url": "https://pokeapi.co/api/v2/move/82/",
+        "type": "dragon",
+        "dmg": 101,
+        "acc": 66,
+        "sp": 12,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 35
+      },
+      {
+        "name": "outrage",
+        "url": "https://pokeapi.co/api/v2/move/200/",
+        "type": "dragon",
+        "dmg": 77,
+        "acc": 97,
+        "sp": 19,
+        "effect": "melt",
+        "effect_acc": 34,
+        "effect_percent": 5
+      },
+      {
+        "name": "dragon-breath",
+        "url": "https://pokeapi.co/api/v2/move/225/",
+        "type": "dragon",
+        "dmg": 24,
+        "acc": 34,
+        "sp": 10,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 61
+      },
+      {
+        "name": "twister",
+        "url": "https://pokeapi.co/api/v2/move/239/",
+        "type": "dragon",
+        "dmg": 61,
+        "acc": 46,
+        "sp": 8,
+        "effect": "defense down",
+        "effect_acc": 39,
+        "effect_percent": 80
+      }
+    ]
+  },
+  {
+    "name": "greedent",
+    "type": "dragon",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/820.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/820.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/820.ogg",
+    "moves": [
+      {
+        "name": "dragon-rage",
+        "url": "https://pokeapi.co/api/v2/move/82/",
+        "type": "dragon",
+        "dmg": 101,
+        "acc": 66,
+        "sp": 12,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 35
+      },
+      {
+        "name": "outrage",
+        "url": "https://pokeapi.co/api/v2/move/200/",
+        "type": "dragon",
+        "dmg": 77,
+        "acc": 97,
+        "sp": 19,
+        "effect": "melt",
+        "effect_acc": 34,
+        "effect_percent": 5
+      },
+      {
+        "name": "dragon-breath",
+        "url": "https://pokeapi.co/api/v2/move/225/",
+        "type": "dragon",
+        "dmg": 24,
+        "acc": 34,
+        "sp": 10,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 61
+      },
+      {
+        "name": "twister",
+        "url": "https://pokeapi.co/api/v2/move/239/",
+        "type": "dragon",
+        "dmg": 61,
+        "acc": 46,
+        "sp": 8,
+        "effect": "defense down",
+        "effect_acc": 39,
+        "effect_percent": 80
+      }
+    ]
+  },
+  {
+    "name": "dubwool",
+    "type": "dragon",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/832.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/832.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/832.ogg",
     "moves": [
       {
         "name": "dragon-rage",
@@ -1056,377 +2169,6 @@
         "effect": "defense down",
         "effect_acc": 39,
         "effect_percent": 80
-      }
-    ]
-  },
-  {
-    "name": "wyrdeer",
-    "type": "psychic",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/899.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/899.ogg",
-    "moves": [
-      {
-        "name": "psybeam",
-        "url": "https://pokeapi.co/api/v2/move/60/",
-        "type": "psychic",
-        "dmg": 47,
-        "acc": 34,
-        "sp": 14,
-        "effect": "defense down",
-        "effect_acc": 93,
-        "effect_percent": 27
-      },
-      {
-        "name": "confusion",
-        "url": "https://pokeapi.co/api/v2/move/93/",
-        "type": "psychic",
-        "dmg": 29,
-        "acc": 78,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 86,
-        "effect_percent": 64
-      },
-      {
-        "name": "psychic",
-        "url": "https://pokeapi.co/api/v2/move/94/",
-        "type": "psychic",
-        "dmg": 133,
-        "acc": 86,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 54,
-        "effect_percent": 12
-      },
-      {
-        "name": "hypnosis",
-        "url": "https://pokeapi.co/api/v2/move/95/",
-        "type": "psychic",
-        "dmg": 42,
-        "acc": 62,
-        "sp": 10,
-        "effect": "defense up",
-        "effect_acc": 51,
-        "effect_percent": 36
-      }
-    ]
-  },
-  {
-    "name": "ursaluna",
-    "type": "psychic",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/901.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/901.ogg",
-    "moves": [
-      {
-        "name": "psybeam",
-        "url": "https://pokeapi.co/api/v2/move/60/",
-        "type": "psychic",
-        "dmg": 47,
-        "acc": 34,
-        "sp": 14,
-        "effect": "defense down",
-        "effect_acc": 93,
-        "effect_percent": 27
-      },
-      {
-        "name": "confusion",
-        "url": "https://pokeapi.co/api/v2/move/93/",
-        "type": "psychic",
-        "dmg": 29,
-        "acc": 78,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 86,
-        "effect_percent": 64
-      },
-      {
-        "name": "psychic",
-        "url": "https://pokeapi.co/api/v2/move/94/",
-        "type": "psychic",
-        "dmg": 133,
-        "acc": 86,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 54,
-        "effect_percent": 12
-      },
-      {
-        "name": "hypnosis",
-        "url": "https://pokeapi.co/api/v2/move/95/",
-        "type": "psychic",
-        "dmg": 42,
-        "acc": 62,
-        "sp": 10,
-        "effect": "defense up",
-        "effect_acc": 51,
-        "effect_percent": 36
-      }
-    ]
-  },
-  {
-    "name": "arboliva",
-    "type": "psychic",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/930.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/930.ogg",
-    "moves": [
-      {
-        "name": "psybeam",
-        "url": "https://pokeapi.co/api/v2/move/60/",
-        "type": "psychic",
-        "dmg": 47,
-        "acc": 34,
-        "sp": 14,
-        "effect": "defense down",
-        "effect_acc": 93,
-        "effect_percent": 27
-      },
-      {
-        "name": "confusion",
-        "url": "https://pokeapi.co/api/v2/move/93/",
-        "type": "psychic",
-        "dmg": 29,
-        "acc": 78,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 86,
-        "effect_percent": 64
-      },
-      {
-        "name": "psychic",
-        "url": "https://pokeapi.co/api/v2/move/94/",
-        "type": "psychic",
-        "dmg": 133,
-        "acc": 86,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 54,
-        "effect_percent": 12
-      },
-      {
-        "name": "hypnosis",
-        "url": "https://pokeapi.co/api/v2/move/95/",
-        "type": "psychic",
-        "dmg": 42,
-        "acc": 62,
-        "sp": 10,
-        "effect": "defense up",
-        "effect_acc": 51,
-        "effect_percent": 36
-      }
-    ]
-  },
-  {
-    "name": "squawkabilly",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/931.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/931.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "grafaiai",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/945.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/945.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "cyclizar",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/967.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/967.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "farigiraf",
-    "type": "psychic",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/981.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/981.ogg",
-    "moves": [
-      {
-        "name": "psybeam",
-        "url": "https://pokeapi.co/api/v2/move/60/",
-        "type": "psychic",
-        "dmg": 47,
-        "acc": 34,
-        "sp": 14,
-        "effect": "defense down",
-        "effect_acc": 93,
-        "effect_percent": 27
-      },
-      {
-        "name": "confusion",
-        "url": "https://pokeapi.co/api/v2/move/93/",
-        "type": "psychic",
-        "dmg": 29,
-        "acc": 78,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 86,
-        "effect_percent": 64
-      },
-      {
-        "name": "psychic",
-        "url": "https://pokeapi.co/api/v2/move/94/",
-        "type": "psychic",
-        "dmg": 133,
-        "acc": 86,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 54,
-        "effect_percent": 12
-      },
-      {
-        "name": "hypnosis",
-        "url": "https://pokeapi.co/api/v2/move/95/",
-        "type": "psychic",
-        "dmg": 42,
-        "acc": 62,
-        "sp": 10,
-        "effect": "defense up",
-        "effect_acc": 51,
-        "effect_percent": 36
       }
     ]
   },
@@ -2434,271 +3176,6 @@
         "effect": "defense down",
         "effect_acc": 42,
         "effect_percent": 39
-      }
-    ]
-  },
-  {
-    "name": "charizard",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/6.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "butterfree",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/12.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "gyarados",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/130.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/130.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "aerodactyl",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/142.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/142.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "articuno",
-    "type": "flying",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/144.ogg",
-    "moves": [
-      {
-        "name": "gust",
-        "url": "https://pokeapi.co/api/v2/move/16/",
-        "type": "flying",
-        "dmg": 12,
-        "acc": 51,
-        "sp": 6,
-        "effect": "health up",
-        "effect_acc": 41,
-        "effect_percent": 12
-      },
-      {
-        "name": "wing-attack",
-        "url": "https://pokeapi.co/api/v2/move/17/",
-        "type": "flying",
-        "dmg": 55,
-        "acc": 93,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 75
-      },
-      {
-        "name": "fly",
-        "url": "https://pokeapi.co/api/v2/move/19/",
-        "type": "flying",
-        "dmg": 123,
-        "acc": 76,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 70
-      },
-      {
-        "name": "peck",
-        "url": "https://pokeapi.co/api/v2/move/64/",
-        "type": "flying",
-        "dmg": 118,
-        "acc": 70,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 30,
-        "effect_percent": 65
       }
     ]
   },
@@ -4722,6 +5199,59 @@
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/450.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/450.ogg",
+    "moves": [
+      {
+        "name": "sand-attack",
+        "url": "https://pokeapi.co/api/v2/move/28/",
+        "type": "ground",
+        "dmg": 40,
+        "acc": 57,
+        "sp": 20,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 33
+      },
+      {
+        "name": "earthquake",
+        "url": "https://pokeapi.co/api/v2/move/89/",
+        "type": "ground",
+        "dmg": 87,
+        "acc": 58,
+        "sp": 16,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 70
+      },
+      {
+        "name": "fissure",
+        "url": "https://pokeapi.co/api/v2/move/90/",
+        "type": "ground",
+        "dmg": 43,
+        "acc": 74,
+        "sp": 15,
+        "effect": "defense down",
+        "effect_acc": 83,
+        "effect_percent": 30
+      },
+      {
+        "name": "dig",
+        "url": "https://pokeapi.co/api/v2/move/91/",
+        "type": "ground",
+        "dmg": 36,
+        "acc": 90,
+        "sp": 20,
+        "effect": "melt",
+        "effect_acc": 82,
+        "effect_percent": 12
+      }
+    ]
+  },
+  {
+    "name": "rhyperior",
+    "type": "ground",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/464.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/464.ogg",
     "moves": [
       {
         "name": "sand-attack",
@@ -7526,59 +8056,6 @@
     ]
   },
   {
-    "name": "trevenant",
-    "type": "ghost",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/709.ogg",
-    "moves": [
-      {
-        "name": "night-shade",
-        "url": "https://pokeapi.co/api/v2/move/101/",
-        "type": "ghost",
-        "dmg": 110,
-        "acc": 62,
-        "sp": 13,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 60
-      },
-      {
-        "name": "confuse-ray",
-        "url": "https://pokeapi.co/api/v2/move/109/",
-        "type": "ghost",
-        "dmg": 62,
-        "acc": 90,
-        "sp": 5,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      },
-      {
-        "name": "lick",
-        "url": "https://pokeapi.co/api/v2/move/122/",
-        "type": "ghost",
-        "dmg": 97,
-        "acc": 33,
-        "sp": 14,
-        "effect": "defense down",
-        "effect_acc": 95,
-        "effect_percent": 12
-      },
-      {
-        "name": "nightmare",
-        "url": "https://pokeapi.co/api/v2/move/171/",
-        "type": "ghost",
-        "dmg": 99,
-        "acc": 31,
-        "sp": 15,
-        "effect": "skip",
-        "effect_acc": 57,
-        "effect_percent": 26
-      }
-    ]
-  },
-  {
     "name": "hoopa",
     "type": "ghost",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/720.png",
@@ -7902,6 +8379,59 @@
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/855.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/855.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/855.ogg",
+    "moves": [
+      {
+        "name": "night-shade",
+        "url": "https://pokeapi.co/api/v2/move/101/",
+        "type": "ghost",
+        "dmg": 110,
+        "acc": 62,
+        "sp": 13,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 60
+      },
+      {
+        "name": "confuse-ray",
+        "url": "https://pokeapi.co/api/v2/move/109/",
+        "type": "ghost",
+        "dmg": 62,
+        "acc": 90,
+        "sp": 5,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 72
+      },
+      {
+        "name": "lick",
+        "url": "https://pokeapi.co/api/v2/move/122/",
+        "type": "ghost",
+        "dmg": 97,
+        "acc": 33,
+        "sp": 14,
+        "effect": "defense down",
+        "effect_acc": 95,
+        "effect_percent": 12
+      },
+      {
+        "name": "nightmare",
+        "url": "https://pokeapi.co/api/v2/move/171/",
+        "type": "ghost",
+        "dmg": 99,
+        "acc": 31,
+        "sp": 15,
+        "effect": "skip",
+        "effect_acc": 57,
+        "effect_percent": 26
+      }
+    ]
+  },
+  {
+    "name": "cursola",
+    "type": "ghost",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/864.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/864.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/864.ogg",
     "moves": [
       {
         "name": "night-shade",
@@ -10918,165 +11448,6 @@
     ]
   },
   {
-    "name": "lanturn",
-    "type": "water",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/171.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/171.ogg",
-    "moves": [
-      {
-        "name": "water-gun",
-        "url": "https://pokeapi.co/api/v2/move/55/",
-        "type": "water",
-        "dmg": 15,
-        "acc": 54,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 57
-      },
-      {
-        "name": "hydro-pump",
-        "url": "https://pokeapi.co/api/v2/move/56/",
-        "type": "water",
-        "dmg": 30,
-        "acc": 64,
-        "sp": 8,
-        "effect": "attack down",
-        "effect_acc": 94,
-        "effect_percent": 72
-      },
-      {
-        "name": "surf",
-        "url": "https://pokeapi.co/api/v2/move/57/",
-        "type": "water",
-        "dmg": 42,
-        "acc": 96,
-        "sp": 5,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      },
-      {
-        "name": "bubble-beam",
-        "url": "https://pokeapi.co/api/v2/move/61/",
-        "type": "water",
-        "dmg": 45,
-        "acc": 69,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      }
-    ]
-  },
-  {
-    "name": "azumarill",
-    "type": "water",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/184.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/184.ogg",
-    "moves": [
-      {
-        "name": "water-gun",
-        "url": "https://pokeapi.co/api/v2/move/55/",
-        "type": "water",
-        "dmg": 15,
-        "acc": 54,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 57
-      },
-      {
-        "name": "hydro-pump",
-        "url": "https://pokeapi.co/api/v2/move/56/",
-        "type": "water",
-        "dmg": 30,
-        "acc": 64,
-        "sp": 8,
-        "effect": "attack down",
-        "effect_acc": 94,
-        "effect_percent": 72
-      },
-      {
-        "name": "surf",
-        "url": "https://pokeapi.co/api/v2/move/57/",
-        "type": "water",
-        "dmg": 42,
-        "acc": 96,
-        "sp": 5,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      },
-      {
-        "name": "bubble-beam",
-        "url": "https://pokeapi.co/api/v2/move/61/",
-        "type": "water",
-        "dmg": 45,
-        "acc": 69,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      }
-    ]
-  },
-  {
-    "name": "quagsire",
-    "type": "water",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/195.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/195.ogg",
-    "moves": [
-      {
-        "name": "water-gun",
-        "url": "https://pokeapi.co/api/v2/move/55/",
-        "type": "water",
-        "dmg": 15,
-        "acc": 54,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 57
-      },
-      {
-        "name": "hydro-pump",
-        "url": "https://pokeapi.co/api/v2/move/56/",
-        "type": "water",
-        "dmg": 30,
-        "acc": 64,
-        "sp": 8,
-        "effect": "attack down",
-        "effect_acc": 94,
-        "effect_percent": 72
-      },
-      {
-        "name": "surf",
-        "url": "https://pokeapi.co/api/v2/move/57/",
-        "type": "water",
-        "dmg": 42,
-        "acc": 96,
-        "sp": 5,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      },
-      {
-        "name": "bubble-beam",
-        "url": "https://pokeapi.co/api/v2/move/61/",
-        "type": "water",
-        "dmg": 45,
-        "acc": 69,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 72
-      }
-    ]
-  },
-  {
     "name": "venusaur",
     "type": "grass",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
@@ -11983,59 +12354,6 @@
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/407.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/407.ogg",
-    "moves": [
-      {
-        "name": "vine-whip",
-        "url": "https://pokeapi.co/api/v2/move/22/",
-        "type": "grass",
-        "dmg": 50,
-        "acc": 81,
-        "sp": 10,
-        "effect": "attack down",
-        "effect_acc": 80,
-        "effect_percent": 36
-      },
-      {
-        "name": "absorb",
-        "url": "https://pokeapi.co/api/v2/move/71/",
-        "type": "grass",
-        "dmg": 36,
-        "acc": 55,
-        "sp": 19,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 21
-      },
-      {
-        "name": "mega-drain",
-        "url": "https://pokeapi.co/api/v2/move/72/",
-        "type": "grass",
-        "dmg": 17,
-        "acc": 57,
-        "sp": 10,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 58
-      },
-      {
-        "name": "leech-seed",
-        "url": "https://pokeapi.co/api/v2/move/73/",
-        "type": "grass",
-        "dmg": 28,
-        "acc": 96,
-        "sp": 5,
-        "effect": "melt",
-        "effect_acc": 41,
-        "effect_percent": 6
-      }
-    ]
-  },
-  {
-    "name": "cherrim",
-    "type": "grass",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/421.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/421.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/421.ogg",
     "moves": [
       {
         "name": "vine-whip",
@@ -13886,59 +14204,6 @@
     ]
   },
   {
-    "name": "medicham",
-    "type": "psychic",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/308.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/308.ogg",
-    "moves": [
-      {
-        "name": "psybeam",
-        "url": "https://pokeapi.co/api/v2/move/60/",
-        "type": "psychic",
-        "dmg": 47,
-        "acc": 34,
-        "sp": 14,
-        "effect": "defense down",
-        "effect_acc": 93,
-        "effect_percent": 27
-      },
-      {
-        "name": "confusion",
-        "url": "https://pokeapi.co/api/v2/move/93/",
-        "type": "psychic",
-        "dmg": 29,
-        "acc": 78,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 86,
-        "effect_percent": 64
-      },
-      {
-        "name": "psychic",
-        "url": "https://pokeapi.co/api/v2/move/94/",
-        "type": "psychic",
-        "dmg": 133,
-        "acc": 86,
-        "sp": 7,
-        "effect": "defense up",
-        "effect_acc": 54,
-        "effect_percent": 12
-      },
-      {
-        "name": "hypnosis",
-        "url": "https://pokeapi.co/api/v2/move/95/",
-        "type": "psychic",
-        "dmg": 42,
-        "acc": 62,
-        "sp": 10,
-        "effect": "defense up",
-        "effect_acc": 51,
-        "effect_percent": 36
-      }
-    ]
-  },
-  {
     "name": "dewgong",
     "type": "ice",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
@@ -14787,112 +15052,6 @@
     ]
   },
   {
-    "name": "aurorus",
-    "type": "ice",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/699.ogg",
-    "moves": [
-      {
-        "name": "ice-punch",
-        "url": "https://pokeapi.co/api/v2/move/8/",
-        "type": "ice",
-        "dmg": 32,
-        "acc": 90,
-        "sp": 20,
-        "effect": "skip",
-        "effect_acc": 75,
-        "effect_percent": 44
-      },
-      {
-        "name": "mist",
-        "url": "https://pokeapi.co/api/v2/move/54/",
-        "type": "ice",
-        "dmg": 34,
-        "acc": 63,
-        "sp": 11,
-        "effect": "attack down",
-        "effect_acc": 95,
-        "effect_percent": 68
-      },
-      {
-        "name": "ice-beam",
-        "url": "https://pokeapi.co/api/v2/move/58/",
-        "type": "ice",
-        "dmg": 43,
-        "acc": 56,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 39
-      },
-      {
-        "name": "blizzard",
-        "url": "https://pokeapi.co/api/v2/move/59/",
-        "type": "ice",
-        "dmg": 34,
-        "acc": 75,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 29
-      }
-    ]
-  },
-  {
-    "name": "avalugg",
-    "type": "ice",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/713.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/713.ogg",
-    "moves": [
-      {
-        "name": "ice-punch",
-        "url": "https://pokeapi.co/api/v2/move/8/",
-        "type": "ice",
-        "dmg": 32,
-        "acc": 90,
-        "sp": 20,
-        "effect": "skip",
-        "effect_acc": 75,
-        "effect_percent": 44
-      },
-      {
-        "name": "mist",
-        "url": "https://pokeapi.co/api/v2/move/54/",
-        "type": "ice",
-        "dmg": 34,
-        "acc": 63,
-        "sp": 11,
-        "effect": "attack down",
-        "effect_acc": 95,
-        "effect_percent": 68
-      },
-      {
-        "name": "ice-beam",
-        "url": "https://pokeapi.co/api/v2/move/58/",
-        "type": "ice",
-        "dmg": 43,
-        "acc": 56,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 39
-      },
-      {
-        "name": "blizzard",
-        "url": "https://pokeapi.co/api/v2/move/59/",
-        "type": "ice",
-        "dmg": 34,
-        "acc": 75,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 29
-      }
-    ]
-  },
-  {
     "name": "crabominable",
     "type": "ice",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
@@ -14951,6 +15110,112 @@
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/866.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/866.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/866.ogg",
+    "moves": [
+      {
+        "name": "ice-punch",
+        "url": "https://pokeapi.co/api/v2/move/8/",
+        "type": "ice",
+        "dmg": 32,
+        "acc": 90,
+        "sp": 20,
+        "effect": "skip",
+        "effect_acc": 75,
+        "effect_percent": 44
+      },
+      {
+        "name": "mist",
+        "url": "https://pokeapi.co/api/v2/move/54/",
+        "type": "ice",
+        "dmg": 34,
+        "acc": 63,
+        "sp": 11,
+        "effect": "attack down",
+        "effect_acc": 95,
+        "effect_percent": 68
+      },
+      {
+        "name": "ice-beam",
+        "url": "https://pokeapi.co/api/v2/move/58/",
+        "type": "ice",
+        "dmg": 43,
+        "acc": 56,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 39
+      },
+      {
+        "name": "blizzard",
+        "url": "https://pokeapi.co/api/v2/move/59/",
+        "type": "ice",
+        "dmg": 34,
+        "acc": 75,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 29
+      }
+    ]
+  },
+  {
+    "name": "frosmoth",
+    "type": "ice",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/873.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/873.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/873.ogg",
+    "moves": [
+      {
+        "name": "ice-punch",
+        "url": "https://pokeapi.co/api/v2/move/8/",
+        "type": "ice",
+        "dmg": 32,
+        "acc": 90,
+        "sp": 20,
+        "effect": "skip",
+        "effect_acc": 75,
+        "effect_percent": 44
+      },
+      {
+        "name": "mist",
+        "url": "https://pokeapi.co/api/v2/move/54/",
+        "type": "ice",
+        "dmg": 34,
+        "acc": 63,
+        "sp": 11,
+        "effect": "attack down",
+        "effect_acc": 95,
+        "effect_percent": 68
+      },
+      {
+        "name": "ice-beam",
+        "url": "https://pokeapi.co/api/v2/move/58/",
+        "type": "ice",
+        "dmg": 43,
+        "acc": 56,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 39
+      },
+      {
+        "name": "blizzard",
+        "url": "https://pokeapi.co/api/v2/move/59/",
+        "type": "ice",
+        "dmg": 34,
+        "acc": 75,
+        "sp": 15,
+        "effect": "",
+        "effect_acc": 0,
+        "effect_percent": 29
+      }
+    ]
+  },
+  {
+    "name": "arctozolt",
+    "type": "ice",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/881.png",
+    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/881.png",
+    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/881.ogg",
     "moves": [
       {
         "name": "ice-punch",
@@ -15799,112 +16064,6 @@
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/644.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/644.ogg",
-    "moves": [
-      {
-        "name": "dragon-rage",
-        "url": "https://pokeapi.co/api/v2/move/82/",
-        "type": "dragon",
-        "dmg": 101,
-        "acc": 66,
-        "sp": 12,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 35
-      },
-      {
-        "name": "outrage",
-        "url": "https://pokeapi.co/api/v2/move/200/",
-        "type": "dragon",
-        "dmg": 77,
-        "acc": 97,
-        "sp": 19,
-        "effect": "melt",
-        "effect_acc": 34,
-        "effect_percent": 5
-      },
-      {
-        "name": "dragon-breath",
-        "url": "https://pokeapi.co/api/v2/move/225/",
-        "type": "dragon",
-        "dmg": 24,
-        "acc": 34,
-        "sp": 10,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 61
-      },
-      {
-        "name": "twister",
-        "url": "https://pokeapi.co/api/v2/move/239/",
-        "type": "dragon",
-        "dmg": 61,
-        "acc": 46,
-        "sp": 8,
-        "effect": "defense down",
-        "effect_acc": 39,
-        "effect_percent": 80
-      }
-    ]
-  },
-  {
-    "name": "kyurem",
-    "type": "dragon",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646.png",
-    "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/646.png",
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/646.ogg",
-    "moves": [
-      {
-        "name": "dragon-rage",
-        "url": "https://pokeapi.co/api/v2/move/82/",
-        "type": "dragon",
-        "dmg": 101,
-        "acc": 66,
-        "sp": 12,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 35
-      },
-      {
-        "name": "outrage",
-        "url": "https://pokeapi.co/api/v2/move/200/",
-        "type": "dragon",
-        "dmg": 77,
-        "acc": 97,
-        "sp": 19,
-        "effect": "melt",
-        "effect_acc": 34,
-        "effect_percent": 5
-      },
-      {
-        "name": "dragon-breath",
-        "url": "https://pokeapi.co/api/v2/move/225/",
-        "type": "dragon",
-        "dmg": 24,
-        "acc": 34,
-        "sp": 10,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 61
-      },
-      {
-        "name": "twister",
-        "url": "https://pokeapi.co/api/v2/move/239/",
-        "type": "dragon",
-        "dmg": 61,
-        "acc": 46,
-        "sp": 8,
-        "effect": "defense down",
-        "effect_acc": 39,
-        "effect_percent": 80
-      }
-    ]
-  },
-  {
-    "name": "dragalge",
-    "type": "dragon",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/691.ogg",
     "moves": [
       {
         "name": "dragon-rage",
@@ -17384,59 +17543,6 @@
     ]
   },
   {
-    "name": "florges",
-    "type": "fairy",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/671.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/671.ogg",
-    "moves": [
-      {
-        "name": "sweet-kiss",
-        "url": "https://pokeapi.co/api/v2/move/186/",
-        "type": "fairy",
-        "dmg": 131,
-        "acc": 75,
-        "sp": 20,
-        "effect": "attack down",
-        "effect_acc": 92,
-        "effect_percent": 13
-      },
-      {
-        "name": "charm",
-        "url": "https://pokeapi.co/api/v2/move/204/",
-        "type": "fairy",
-        "dmg": 125,
-        "acc": 32,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 20
-      },
-      {
-        "name": "moonlight",
-        "url": "https://pokeapi.co/api/v2/move/236/",
-        "type": "fairy",
-        "dmg": 144,
-        "acc": 96,
-        "sp": 18,
-        "effect": "melt",
-        "effect_acc": 95,
-        "effect_percent": 18
-      },
-      {
-        "name": "disarming-voice",
-        "url": "https://pokeapi.co/api/v2/move/574/",
-        "type": "fairy",
-        "dmg": 18,
-        "acc": 74,
-        "sp": 10,
-        "effect": "attack down",
-        "effect_acc": 60,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
     "name": "aromatisse",
     "type": "fairy",
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png",
@@ -17654,112 +17760,6 @@
     "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png",
     "backSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/707.png",
     "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/707.ogg",
-    "moves": [
-      {
-        "name": "sweet-kiss",
-        "url": "https://pokeapi.co/api/v2/move/186/",
-        "type": "fairy",
-        "dmg": 131,
-        "acc": 75,
-        "sp": 20,
-        "effect": "attack down",
-        "effect_acc": 92,
-        "effect_percent": 13
-      },
-      {
-        "name": "charm",
-        "url": "https://pokeapi.co/api/v2/move/204/",
-        "type": "fairy",
-        "dmg": 125,
-        "acc": 32,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 20
-      },
-      {
-        "name": "moonlight",
-        "url": "https://pokeapi.co/api/v2/move/236/",
-        "type": "fairy",
-        "dmg": 144,
-        "acc": 96,
-        "sp": 18,
-        "effect": "melt",
-        "effect_acc": 95,
-        "effect_percent": 18
-      },
-      {
-        "name": "disarming-voice",
-        "url": "https://pokeapi.co/api/v2/move/574/",
-        "type": "fairy",
-        "dmg": 18,
-        "acc": 74,
-        "sp": 10,
-        "effect": "attack down",
-        "effect_acc": 60,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "xerneas",
-    "type": "fairy",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/716.ogg",
-    "moves": [
-      {
-        "name": "sweet-kiss",
-        "url": "https://pokeapi.co/api/v2/move/186/",
-        "type": "fairy",
-        "dmg": 131,
-        "acc": 75,
-        "sp": 20,
-        "effect": "attack down",
-        "effect_acc": 92,
-        "effect_percent": 13
-      },
-      {
-        "name": "charm",
-        "url": "https://pokeapi.co/api/v2/move/204/",
-        "type": "fairy",
-        "dmg": 125,
-        "acc": 32,
-        "sp": 15,
-        "effect": "",
-        "effect_acc": 0,
-        "effect_percent": 20
-      },
-      {
-        "name": "moonlight",
-        "url": "https://pokeapi.co/api/v2/move/236/",
-        "type": "fairy",
-        "dmg": 144,
-        "acc": 96,
-        "sp": 18,
-        "effect": "melt",
-        "effect_acc": 95,
-        "effect_percent": 18
-      },
-      {
-        "name": "disarming-voice",
-        "url": "https://pokeapi.co/api/v2/move/574/",
-        "type": "fairy",
-        "dmg": 18,
-        "acc": 74,
-        "sp": 10,
-        "effect": "attack down",
-        "effect_acc": 60,
-        "effect_percent": 65
-      }
-    ]
-  },
-  {
-    "name": "diancie",
-    "type": "fairy",
-    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/719.png",
-    "backSprite": null,
-    "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/719.ogg",
     "moves": [
       {
         "name": "sweet-kiss",
