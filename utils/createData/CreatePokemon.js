@@ -14,7 +14,7 @@ const TYPES = [
 const Pokemon = require('../../models/Pokemon');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONG_URI, {
+mongoose.connect("mongodb+srv://manorokah4:IATeyLGTiwCBNqYZ@pokeseed.vvz2voi.mongodb.net/PokeSeed?retryWrites=true&w=majority&appName=PokeSeed", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -49,15 +49,26 @@ function getFinalEvolution(pokemonSpecies) {
 }
 
 // Filter and fetch Pokémon data
-async function filterAndFetchPokemon(type, finalPokemonList, typePokemonMap) {
+async function filterAndFetchPokemon(type, finalPokemonList, typePokemonMap, seenPokemon) {
     const pokemonList = await fetchPokemonByType(type);
+
+    // Create a separate list to collect all Normal-type Pokémon
+    const normalTypePokemonList = [];
 
     for (const item of pokemonList) {
         const details = await fetchPokemonDetails(item.pokemon.url);
-        
-        const isNormalType = details.types[0].type.name === 'normal';
+
+        const isNormalType = details.types.some(t => t.type.name === 'normal');
+
+        // If the Pokémon has Normal as one of its types, add it to the normalTypePokemonList
+        if (isNormalType) {
+            normalTypePokemonList.push(details);
+        }
+
+        // Ensure Pokémon is categorized under the correct type
+        let categorizedType = type;
         if (details.types.length > 1 && isNormalType) {
-            type = details.types[1].type.name; // Use the second type if primary type is Normal
+            categorizedType = details.types.find(t => t.type.name !== 'normal').type.name;
         }
 
         const species = await axios.get(details.species.url);
@@ -66,27 +77,76 @@ async function filterAndFetchPokemon(type, finalPokemonList, typePokemonMap) {
 
         if (finalEvolution !== details.name) continue; // Ensure it's the final evolution
 
-        if (!typePokemonMap[type]) {
-            typePokemonMap[type] = new Set();
+        // Skip if the Pokémon has already been added
+        if (seenPokemon.has(details.name)) continue;
+
+        if (!typePokemonMap[categorizedType]) {
+            typePokemonMap[categorizedType] = new Set();
         }
 
-        if (typePokemonMap[type].size >= 20) {
-            continue; // Skip if we already have 20 Pokémon for this type
+        if (typePokemonMap[categorizedType].size < 20) { // Ensure we have at least 20 Pokémon for this type
+            if (!typePokemonMap[categorizedType].has(details.name)) {
+                const pokemonData = {
+                    name: details.name,
+                    type: categorizedType,
+                    frontSprite: details.sprites.front_default,
+                    backSprite: details.sprites.back_default,
+                    cry: `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${details.id}.ogg`,
+                    moves: [] // Will be filled later
+                };
+
+                if (pokemonData.backSprite) {
+                    finalPokemonList.push(pokemonData);
+                    typePokemonMap[categorizedType].add(details.name);
+                    seenPokemon.add(details.name); // Mark the Pokémon as seen
+                }
+            }
         }
 
-        if (!typePokemonMap[type].has(details.name)) {
+        if (typePokemonMap[categorizedType].size >= 20) break; // Stop once we have 20 Pokémon for this type
+    }
+
+    // If we're currently processing the Normal type, select 20 random Normal-type Pokémon
+    if (type === 'normal') {
+        const finalNormalPokemonList = await Promise.all(normalTypePokemonList.map(async pokemon => {
+            const species = await axios.get(pokemon.species.url);
+            const evolutionChain = await axios.get(species.data.evolution_chain.url);
+            const finalEvolution = getFinalEvolution(evolutionChain.data.chain);
+
+            if (finalEvolution === pokemon.name) {
+                return pokemon;
+            }
+            return null;
+        }));
+
+        // Filter out any null values from the list
+        const validNormalPokemonList = finalNormalPokemonList.filter(pokemon => pokemon !== null);
+
+        // Randomly shuffle the validNormalPokemonList and pick 20 Pokémon
+        const randomNormalPokemon = validNormalPokemonList
+            .sort(() => 0.5 - Math.random()) // Shuffle the list
+            .slice(0, 20); // Get the first 20 Pokémon
+
+        for (const pokemon of randomNormalPokemon) {
+            if (!typePokemonMap['normal']) {
+                typePokemonMap['normal'] = new Set();
+            }
+
+            if (seenPokemon.has(pokemon.name)) continue;
+
             const pokemonData = {
-                name: details.name,
-                type: type,
-                frontSprite: details.sprites.front_default,
-                backSprite: details.sprites.back_default,
-                cry: `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${details.id}.ogg`,
+                name: pokemon.name,
+                type: 'normal',
+                frontSprite: pokemon.sprites.front_default,
+                backSprite: pokemon.sprites.back_default,
+                cry: `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${pokemon.id}.ogg`,
                 moves: [] // Will be filled later
             };
 
-            if (pokemonData.backSprite) {
+            if (pokemonData.backSprite && !typePokemonMap['normal'].has(pokemon.name)) {
                 finalPokemonList.push(pokemonData);
-                typePokemonMap[type].add(details.name);
+                typePokemonMap['normal'].add(pokemon.name);
+                seenPokemon.add(pokemon.name); // Mark the Pokémon as seen
             }
         }
     }
@@ -122,9 +182,10 @@ const generatePokemonJSON = async () => {
     const movesData = await fetchPokemonMoves();
     const finalPokemonList = [];
     const typePokemonMap = {}; // Map to keep track of Pokémon by type
+    const seenPokemon = new Set(); // Set to track Pokémon that have already been processed
 
     for (const type of TYPES) {
-        await filterAndFetchPokemon(type, finalPokemonList, typePokemonMap);
+        await filterAndFetchPokemon(type, finalPokemonList, typePokemonMap, seenPokemon);
     }
 
     assignMovesToPokemon(finalPokemonList, movesData);

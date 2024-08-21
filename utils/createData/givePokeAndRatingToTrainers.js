@@ -4,7 +4,7 @@ const Pokemon = require('../../models/Pokemon');
 const PokemonTrainer = require('../../models/PokeTrainers');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONG_URI, {
+mongoose.connect("mongodb+srv://manorokah4:IATeyLGTiwCBNqYZ@pokeseed.vvz2voi.mongodb.net/PokeSeed?retryWrites=true&w=majority&appName=PokeSeed", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -67,14 +67,11 @@ const assignPokemonAndCalculateStrength = async () => {
                     trainer.team.push(selectedPokemon); // Push the full Pokémon object
                 }
             }
-            console.log(trainer.team);
 
             // Calculate the trainer's strength
             let totalStrength = 0;
             for (const pokemon of trainer.team) {
-                console.log('pokemon',pokemon)
                 let pokemonStrength = (pokemon.stats?.str || 0) + (pokemon.stats?.hp || 0) + (pokemon.stats?.def || 0);
-                console.log(`Base Strength for ${pokemon.name}:`, pokemonStrength);
 
                 for (const move of pokemon.moves) {
                     const moveImpact = calculateMoveImpact(move, pokemon.stats);
@@ -90,7 +87,7 @@ const assignPokemonAndCalculateStrength = async () => {
             console.log(`Trainer ${trainer.name} has a total strength of ${totalStrength} and a rating of ${trainer.rating}`);
             
             await trainer.save();
-            console.log(`Updated trainer ${trainer.name} with new team and rating ${trainer.rating}`);
+            console.log(trainer.team);
         }
 
     } catch (error) {

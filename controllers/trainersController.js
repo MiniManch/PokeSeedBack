@@ -2,7 +2,7 @@ const Trainer = require('../models/PokeTrainers');
 
 exports.getAllTrainers = async (req, res) => {
   try {
-    const trainers = await Trainer.find({});
+    const trainers = await Trainer.find({}).populate('team');
     res.json(trainers);
   } catch (error) {
     res.status(500).json({ message: "Error fetching trainers", error });
@@ -12,7 +12,7 @@ exports.getAllTrainers = async (req, res) => {
 exports.getTrainerByName = async (req, res) => {
   try {
     const trainerName = req.params.name;
-    const trainer = await Trainer.findOne({ name: trainerName });
+    const trainer = await Trainer.findOne({ name: trainerName }).populate('team');
     if (!trainer) {
       return res.status(404).json({ message: "Trainer not found" });
     }
