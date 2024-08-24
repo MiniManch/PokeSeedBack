@@ -13,29 +13,39 @@ const TYPES = [
 
 const Pokemon = require('../../models/Pokemon');
 
+console.log('Starting script execution...');
+
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://manorokah4:IATeyLGTiwCBNqYZ@pokeseed.vvz2voi.mongodb.net/PokeSeed?retryWrites=true&w=majority&appName=PokeSeed", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 .then(() => console.log('MongoDB connected'))
-.catch((err) => console.error('MongoDB connection error:', err));
+.catch((err) => {
+    console.error('MongoDB connection error:', err);
+    process.exit(1); // Exit if the database connection fails
+});
 
 // Fetch Pokémon by type from PokeAPI
 async function fetchPokemonByType(type) {
+    console.log(`Fetching Pokémon by type: ${type}`);
     const response = await axios.get(`${POKE_API_BASE_URL}/type/${type}`);
+    console.log(`Fetched ${response.data.pokemon.length} Pokémon for type: ${type}`);
     return response.data.pokemon;
 }
 
 // Fetch Pokémon details from PokeAPI
 async function fetchPokemonDetails(url) {
+    console.log(`Fetching Pokémon details from URL: ${url}`);
     const response = await axios.get(url);
     return response.data;
 }
 
 // Fetch Pokémon moves from the JSON file
 async function fetchPokemonMoves() {
+    console.log(`Reading moves data from file: ${POKE_MOVES_FILE}`);
     const data = fs.readFileSync(POKE_MOVES_FILE);
+    console.log(`Moves data read successfully`);
     return JSON.parse(data);
 }
 
@@ -50,6 +60,7 @@ function getFinalEvolution(pokemonSpecies) {
 
 // Filter and fetch Pokémon data
 async function filterAndFetchPokemon(type, finalPokemonList, typePokemonMap, seenPokemon) {
+    console.log(`Filtering and fetching Pokémon data for type: ${type}`);
     const pokemonList = await fetchPokemonByType(type);
 
     // Create a separate list to collect all Normal-type Pokémon
@@ -99,6 +110,7 @@ async function filterAndFetchPokemon(type, finalPokemonList, typePokemonMap, see
                     finalPokemonList.push(pokemonData);
                     typePokemonMap[categorizedType].add(details.name);
                     seenPokemon.add(details.name); // Mark the Pokémon as seen
+                    console.log(`Added ${details.name} to final list under type: ${categorizedType}`);
                 }
             }
         }
@@ -147,22 +159,43 @@ async function filterAndFetchPokemon(type, finalPokemonList, typePokemonMap, see
                 finalPokemonList.push(pokemonData);
                 typePokemonMap['normal'].add(pokemon.name);
                 seenPokemon.add(pokemon.name); // Mark the Pokémon as seen
+                console.log(`Added ${pokemon.name} to final list under type: normal`);
             }
         }
     }
+
+    console.log(`Completed filtering and fetching for type: ${type}`);
 }
 
 // Assign moves to Pokémon
 function assignMovesToPokemon(pokemonList, movesData) {
+    console.log(`Assigning moves to Pokémon`);
     pokemonList.forEach(pokemon => {
         const typeMoves = movesData.filter(move => move.type === pokemon.type);
         const normalMoves = movesData.filter(move => move.type === 'normal');
-        
-        let selectedMoves = typeMoves.slice(0, 4);
-        if (selectedMoves.length < 4) {
-            selectedMoves = selectedMoves.concat(normalMoves.slice(0, 4 - selectedMoves.length));
+
+        // Randomly select 1 or 2 normal moves
+        const numNormalMoves = Math.floor(Math.random() * 2) + 1; // 1 or 2
+        const selectedNormalMoves = [];
+        for (let i = 0; i < numNormalMoves; i++) {
+            const randomIndex = Math.floor(Math.random() * normalMoves.length);
+            selectedNormalMoves.push(normalMoves[randomIndex]);
+            normalMoves.splice(randomIndex, 1); // Remove selected move to avoid duplicates
         }
-        
+
+        // Select the remaining moves from the Pokémon's type
+        const numTypeMoves = 4 - selectedNormalMoves.length; // Remaining moves to select
+        const selectedTypeMoves = [];
+        for (let i = 0; i < numTypeMoves; i++) {
+            const randomIndex = Math.floor(Math.random() * typeMoves.length);
+            selectedTypeMoves.push(typeMoves[randomIndex]);
+            typeMoves.splice(randomIndex, 1); // Remove selected move to avoid duplicates
+        }
+
+        // Combine selected normal and type moves
+        const selectedMoves = selectedNormalMoves.concat(selectedTypeMoves);
+
+        // Assign the selected moves to the Pokémon
         pokemon.moves = selectedMoves.map(move => ({
             name: move.name,
             url: move.url,
@@ -174,15 +207,19 @@ function assignMovesToPokemon(pokemonList, movesData) {
             effect_acc: move.effect_acc || 0,
             effect_percent: move.effect_percent || 0
         }));
+
+        console.log(`Assigned moves to ${pokemon.name}`);
     });
 }
 
+
 // Generate Pokémon JSON file and save to MongoDB
 const generatePokemonJSON = async () => {
+    console.log('Generating Pokémon JSON file...');
     const movesData = await fetchPokemonMoves();
     const finalPokemonList = [];
-    const typePokemonMap = {}; // Map to keep track of Pokémon by type
-    const seenPokemon = new Set(); // Set to track Pokémon that have already been processed
+    const typePokemonMap = {};
+    const seenPokemon = new Set();
 
     for (const type of TYPES) {
         await filterAndFetchPokemon(type, finalPokemonList, typePokemonMap, seenPokemon);
@@ -195,6 +232,7 @@ const generatePokemonJSON = async () => {
 
     // Save Pokémon to MongoDB
     try {
+        console.log('Saving Pokémon data to MongoDB...');
         await Pokemon.deleteMany(); // Clear existing Pokémon
         await Pokemon.insertMany(finalPokemonList);
         console.log('Pokémon data saved to MongoDB successfully!');
@@ -204,17 +242,10 @@ const generatePokemonJSON = async () => {
 };
 
 // Generate random stats and update Pokémon documents
-const generateRandomStats = () => ({
-    str: Math.floor(Math.random() * (150 - 60 + 1)) + 60,
-    hp: Math.floor(Math.random() * (450 - 250 + 1)) + 250,
-    def: Math.floor(Math.random() * (150 - 60 + 1)) + 60,
-});
-
 const updatePokemonStats = async () => {
+    console.log('Updating Pokémon stats...');
     try {
-        // Find all Pokémon in the database
         const pokemons = await Pokemon.find();
-
         if (pokemons.length === 0) {
             console.log('No Pokémon found in the database.');
             return;
@@ -223,15 +254,18 @@ const updatePokemonStats = async () => {
         console.log(`Found ${pokemons.length} Pokémon`);
 
         for (const pokemon of pokemons) {
-            // Generate random stats
-            const stats = generateRandomStats();
+            pokemon.stats = {
+                hp: Math.floor(Math.random() * 100) + 1,
+                atk: Math.floor(Math.random() * 100) + 1,
+                def: Math.floor(Math.random() * 100) + 1,
+                spAtk: Math.floor(Math.random() * 100) + 1,
+                spDef: Math.floor(Math.random() * 100) + 1,
+                speed: Math.floor(Math.random() * 100) + 1,
+            };
 
-            // Update Pokémon document with new stats
-            pokemon.stats = stats;
             await pokemon.save();
-            console.log(`Updated ${pokemon.name} with stats:`, stats);
+            console.log(`Updated ${pokemon.name} with stats:`, pokemon.stats);
         }
-
     } catch (error) {
         console.error('Error updating Pokémon stats:', error.message);
     } finally {
@@ -242,8 +276,10 @@ const updatePokemonStats = async () => {
 
 // Main function to execute all tasks
 const main = async () => {
+    console.log('Starting main execution...');
     await generatePokemonJSON();
     await updatePokemonStats();
+    console.log('Script execution completed.');
 };
 
 main();

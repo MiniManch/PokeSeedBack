@@ -8,9 +8,10 @@ const UserSchema = new mongoose.Schema({
   rating: { type: Number, default: 0 },
   wins: { type: Number, default: 0 },
   losses: { type: Number, default: 0 },
-  champion: { type: Number, default: 0 }
+  champion: { type: Number, default: 0 },
+  trainer: { type: String, required: false}
 });
-
+ 
 UserSchema.pre('save', async function(next) {
   if (!this.isModified('password')) return next();
 
