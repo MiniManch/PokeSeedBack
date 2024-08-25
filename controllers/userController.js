@@ -87,17 +87,18 @@ exports.getUserData = async (req, res) => {
   }
 
   try {
-      const user = await User.findOne({ username });
+      const user = await User.findOne({ username }).select('-password'); // Exclude the password field
       if (!user) {
           return res.status(400).json({ message: 'Invalid username' });
       }
 
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      res.status(200).json({ message: 'Valid retrieval', user: user });
+      res.status(200).json({ message: 'Valid retrieval', user });
   } catch (error) {
       res.status(401).json({ message: 'Invalid or expired token', error });
   }
 };
+
 
 // Check if the login token is valid
 exports.checkLogin = (req, res) => {
