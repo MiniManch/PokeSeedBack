@@ -12,7 +12,6 @@ exports.getAllTrainers = async (req, res) => {
 exports.getTrainerByName = async (req, res) => {
   try {
     const trainerName = req.params.name;
-    console.log('Fetching trainer with name:', trainerName); // Log the trainer name
     
     const trainer = await Trainer.findOne({ name: trainerName }).populate('team');
     if (!trainer) {

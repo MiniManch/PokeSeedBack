@@ -9,7 +9,8 @@ const UserSchema = new mongoose.Schema({
   wins: { type: Number, default: 0 },
   losses: { type: Number, default: 0 },
   champion: { type: Number, default: 0 },
-  trainer: { type: String, required: false}
+  trainer: { type: String, required: false},
+  bg: { type: String, required: false},
 });
  
 UserSchema.pre('save', async function(next) {

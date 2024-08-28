@@ -8,7 +8,8 @@ const TrainerSchema = new mongoose.Schema({
     champion: { type: String, default: false },
     losses: { type: Number, default: 0 },
     frontSprite: { type: String, default: '' },
-    backSprite: { type: String, default: '' }
+    backSprite: { type: String, default: '' },
+    profileImage: { type: String, default: '' }
 });
 
 const Trainer = mongoose.model('PokeTrainers', TrainerSchema, 'PokeTrainers');
