@@ -79,25 +79,129 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-exports.getUserData = async (req, res) => {
-  const { username } = req.params; // This should correctly fetch the username from the URL
+
+exports.addPokemonToTeam = async (req, res) => {
+  const { username } = req.params;
+  const { pokemonName } = req.body;
   const token = req.header('Authorization')?.replace('Bearer ', '');
-  if (!token || !username) {
-      return res.status(401).json({ message: 'No token or username provided' });
+
+  if (!token || !pokemonName) {
+    return res.status(401).json({ message: 'No token or Pokémon name provided' });
   }
 
   try {
-      const user = await User.findOne({ username }).select('-password'); // Exclude the password field
-      if (!user) {
-          return res.status(400).json({ message: 'Invalid username' });
-      }
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      res.status(200).json({ message: 'Valid retrieval', user });
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (user.team.length >= 4) {
+      return res.status(400).json({ message: 'Team is full' });
+    }
+
+    if (user.team.includes(pokemonName)) {
+      return res.status(400).json({ message: 'Pokémon is already in the team' });
+    }
+
+    user.team.push(pokemonName);
+    await user.save();
+
+    res.status(200).json({ message: 'Pokémon added to team', team: user.team });
   } catch (error) {
-      res.status(401).json({ message: 'Invalid or expired token', error });
+    res.status(500).json({ message: 'Error adding Pokémon to team', error });
   }
 };
+
+// Update a Pokémon in the user's team
+exports.updatePokemonInTeam = async (req, res) => {
+  const { username } = req.params;
+  const { oldPokemonName, newPokemonName } = req.body;
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+
+  if (!token || !oldPokemonName || !newPokemonName) {
+    return res.status(401).json({ message: 'Token, old Pokémon name, or new Pokémon name not provided' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    const pokemonIndex = user.team.indexOf(oldPokemonName);
+    if (pokemonIndex === -1) {
+      return res.status(400).json({ message: 'Old Pokémon not found in team' });
+    }
+
+    // Replace the old Pokémon with the new one
+    user.team[pokemonIndex] = newPokemonName;
+    await user.save();
+
+    res.status(200).json({ message: 'Pokémon updated in team', team: user.team });
+  } catch (error) {
+    res.status(500).json({ message: 'Error updating Pokémon in team', error });
+  }
+};
+
+exports.deletePokemonFromTeam = async (req, res) => {
+  const { username } = req.params;
+  const { pokemonName } = req.body;
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+
+  if (!token || !pokemonName) {
+    return res.status(401).json({ message: 'Token or Pokémon name not provided' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    const pokemonIndex = user.team.indexOf(pokemonName);
+    if (pokemonIndex === -1) {
+      return res.status(400).json({ message: 'Pokémon not found in team' });
+    }
+
+    // Remove the Pokémon from the team
+    user.team.splice(pokemonIndex, 1);
+    await user.save();
+
+    res.status(200).json({ message: 'Pokémon removed from team', team: user.team });
+  } catch (error) {
+    res.status(500).json({ message: 'Error removing Pokémon from team', error });
+  }
+};
+
+
+exports.getUserData = async (req, res) => {
+  const { username } = req.params;
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+  console.log('tried to login:',username)
+
+  if (!token || !username) {
+    return res.status(401).json({ message: 'No token or username provided' });
+  }
+
+  try {
+    const user = await User.findOne({ username }).select('-password');
+    if (!user) {
+      return res.status(400).json({ message: 'Invalid username' });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    res.status(200).json({ message: 'Valid retrieval', user });
+  } catch (error) {
+    res.status(401).json({ message: 'Invalid or expired token', error });
+  }
+};
+
 
 
 // Check if the login token is valid
