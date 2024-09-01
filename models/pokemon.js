@@ -16,7 +16,11 @@ const moveSchema = new mongoose.Schema({
 const statsSchema = new mongoose.Schema({
     str: Number,
     hp: Number,
-    def: Number
+    def: Number,
+    spAtk:Number,
+    spDef:Number,
+    speed:Number
+
 });
 
 const pokemonSchema = new mongoose.Schema({

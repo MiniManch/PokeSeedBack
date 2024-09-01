@@ -72,8 +72,17 @@ const assignPokemonAndCalculateStrength = async () => {
 
             let totalStrength = 0;
             for (const pokemon of trainer.team) {
-                let pokemonStrength = (pokemon.stats?.str || 0) + (pokemon.stats?.hp || 0) + (pokemon.stats?.def || 0);
+                // Calculate Pokémon strength using str, spAtk, and speed, along with other stats
+                let pokemonStrength = 
+                    (pokemon.stats?.str || 0) + 
+                    (pokemon.stats?.spAtk || 0) + 
+                    (pokemon.stats?.speed || 0) + 
+                    (pokemon.stats?.hp || 0) + 
+                    (pokemon.stats?.def || 0);
 
+                    console.log(pokemonStrength)
+
+                // Add move impacts to the Pokémon's strength
                 for (const move of pokemon.moves) {
                     const moveImpact = calculateMoveImpact(move, pokemon.stats);
                     pokemonStrength += moveImpact;

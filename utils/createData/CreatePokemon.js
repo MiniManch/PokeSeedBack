@@ -255,12 +255,12 @@ const updatePokemonStats = async () => {
 
         for (const pokemon of pokemons) {
             pokemon.stats = {
-                hp: Math.floor(Math.random() * 100) + 1,
-                atk: Math.floor(Math.random() * 100) + 1,
-                def: Math.floor(Math.random() * 100) + 1,
-                spAtk: Math.floor(Math.random() * 100) + 1,
-                spDef: Math.floor(Math.random() * 100) + 1,
-                speed: Math.floor(Math.random() * 100) + 1,
+                hp: Math.floor(Math.random() * 101) + 50,       // 50 - 150
+                str: Math.floor(Math.random() * 101) + 50,      // 50 - 150
+                def: Math.floor(Math.random() * 101) + 50,      // 50 - 150
+                spAtk: Math.floor(Math.random() * 81) + 20,     // 20 - 100
+                spDef: Math.floor(Math.random() * 81) + 20,     // 20 - 100
+                speed: Math.floor(Math.random() * 81) + 20,     // 20 - 100
             };
 
             await pokemon.save();
