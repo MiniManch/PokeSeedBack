@@ -5,7 +5,7 @@ const cors = require('cors');
 const pokemonRoutes = require('./routes/pokemon');
 const typesRoutes = require('./routes/Types');
 const trainersRoutes = require('./routes/Trainers');
-// const tournamentRoutes = require('./routes/Trainers');
+const tournamentRoutes = require('./routes/tournaments');
 const userRoutes = require('./routes/Users');
 
 // const updateTrainersWithPokemons = require('./utils/givePokemonToTrainers'); // Adjust path if needed
@@ -35,7 +35,7 @@ app.use('/api/pokemon', pokemonRoutes);
 app.use('/api/types', typesRoutes);
 app.use('/api/trainers', trainersRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/api/tournaments', tournamentRoutes);
 
 // Start server
 app.listen(port, () => {

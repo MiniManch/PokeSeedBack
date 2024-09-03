@@ -1,22 +1,35 @@
 // controllers/tournamentController.js
 const Tournament = require('../models/Tournament');
 const User = require('../models/User');
-const PokeTrainer = require('../models/PokeTrainer');
+const PokeTrainer = require('../models/PokeTrainers');
 
 // Create a new tournament
 exports.createTournament = async (req, res) => {
   try {
-    const { userId, selectedTrainerId } = req.body;
+    const { username } = req.body;
+    const user = await User.findOne({ username });
 
-    const user = await User.findById(userId);
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
+    console.log(user.trainer)
+    const userTrainer = await PokeTrainer.findOne({ name: user.trainer });
 
-    const trainer = await PokeTrainer.findById(selectedTrainerId);
-    if (!trainer) {
+    if (!userTrainer) {
       return res.status(404).json({ message: 'Trainer not found' });
     }
+
+    // Fetch all trainers excluding the user's trainer
+    const allTrainers = await PokeTrainer.find({ _id: { $ne: userTrainer._id } });
+    const onlyOppTrainers = allTrainers.filter(t => t.rating !== '');
+
+    // Check if there are enough trainers
+    if (onlyOppTrainers.length < 16) {
+      return res.status(400).json({ message: 'Not enough trainers to create a tournament.' });
+    }
+
+    // Shuffle trainers and select the required number for the tournament
+    const shuffledTrainers = onlyOppTrainers.sort(() => 0.5 - Math.random()).slice(0, 16);
 
     // Tournament structure with 15 matches
     const matches = [
@@ -41,6 +54,16 @@ exports.createTournament = async (req, res) => {
       { matchNumber: 15, roundType: 'Final' }
     ];
 
+    // Assign trainers to the matches using their names
+    for (let i = 0; i < matches.length; i++) {
+      if (shuffledTrainers[i * 2] && shuffledTrainers[i * 2 + 1]) {
+        matches[i].players = [shuffledTrainers[i * 2].name, shuffledTrainers[i * 2 + 1].name];
+      } else {
+        // If we don't have enough trainers, break out of the loop
+        break;
+      }
+    }
+
     const newTournament = new Tournament({
       name: `Tournament ${Date.now()}`,
       matches: matches.map(match => ({
@@ -50,9 +73,12 @@ exports.createTournament = async (req, res) => {
       }))
     });
 
+    console.log
+
     await newTournament.save();
     res.status(201).json(newTournament);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: 'Error creating tournament', error });
   }
 };
