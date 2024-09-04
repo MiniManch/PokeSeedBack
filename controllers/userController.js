@@ -119,7 +119,6 @@ exports.updatePokemonInTeam = async (req, res) => {
   const { username } = req.params;
   const { oldPokemonName, newPokemonName } = req.body;
   const token = req.header('Authorization')?.replace('Bearer ', '');
-
   if (!token || !oldPokemonName || !newPokemonName) {
     return res.status(401).json({ message: 'Token, old Pokémon name, or new Pokémon name not provided' });
   }

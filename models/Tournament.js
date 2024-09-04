@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const MatchSchema = new mongoose.Schema({
   matchNumber: { type: Number, required: true },
   roundType: { type: String, required: true },
-  players: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Trainer' }],
+  players: [{ type: String, required: true }], // Change to String
   winner: { type: mongoose.Schema.Types.ObjectId, ref: 'Trainer' },
   loser: { type: mongoose.Schema.Types.ObjectId, ref: 'Trainer' },
   userPlayingAs: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
