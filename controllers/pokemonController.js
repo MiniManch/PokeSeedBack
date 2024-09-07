@@ -23,8 +23,6 @@ const getPokemonByName = async (req, res) => {
 
         // Fetch the type data from the PokeTypes collection
         const pokeType = await PokeType.findOne({ name: pokemon.type.toLowerCase() });
-        console.log(pokeType);
-        console.log(pokemon.type)
         if (!pokeType) {
             res.status(404).json({ message: 'Pokémon type not found' });
             return;
