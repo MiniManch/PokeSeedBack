@@ -28,6 +28,7 @@ const pokemonSchema = new mongoose.Schema({
     type: String,
     frontSprite: String,
     backSprite: String,
+    pokeDexImg: String,
     cry: String,
     moves: [moveSchema],
     stats: statsSchema

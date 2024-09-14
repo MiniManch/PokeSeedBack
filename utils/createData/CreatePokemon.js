@@ -227,6 +227,11 @@ const generatePokemonJSON = async () => {
 
     assignMovesToPokemon(finalPokemonList, movesData);
 
+    // Add pokeDexImg for each Pokémon in the list
+    finalPokemonList.forEach(pokemon => {
+        pokemon.pokeDexImg = `https://img.pokemondb.net/sprites/brilliant-diamond-shining-pearl/normal/${pokemon.name}.png`;
+    });
+
     fs.writeFileSync('./finalPokemon.json', JSON.stringify(finalPokemonList, null, 2));
     console.log('finalPokemon.json created successfully!');
 
