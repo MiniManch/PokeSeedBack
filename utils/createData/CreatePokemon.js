@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const POKE_API_BASE_URL = 'https://pokeapi.co/api/v2';
-const POKE_MOVES_FILE = './data/updated_moves.json'; // Adjust the path as necessary
+const POKE_MOVES_FILE = '../../data/updated_moves.json'; // Adjust the path as necessary
 const TYPES = [
   'normal', 'fighting', 'flying', 'poison', 'ground', 'rock', 'bug', 'ghost',
   'steel', 'fire', 'water', 'grass', 'electric', 'psychic', 'ice', 'dragon',
@@ -229,7 +229,9 @@ const generatePokemonJSON = async () => {
 
     // Add pokeDexImg for each Pokémon in the list
     finalPokemonList.forEach(pokemon => {
-        pokemon.pokeDexImg = `https://img.pokemondb.net/sprites/brilliant-diamond-shining-pearl/normal/${pokemon.name}.png`;
+        https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif
+        // pokemon.pokeDexImg = `https://img.pokemondb.net/sprites/brilliant-diamond-shining-pearl/normal/${pokemon.name}.png`;
+        pokemon.pokeDexImg = `https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif`
     });
 
     fs.writeFileSync('./finalPokemon.json', JSON.stringify(finalPokemonList, null, 2));
