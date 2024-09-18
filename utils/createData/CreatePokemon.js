@@ -212,7 +212,6 @@ function assignMovesToPokemon(pokemonList, movesData) {
     });
 }
 
-
 // Generate Pokémon JSON file and save to MongoDB
 const generatePokemonJSON = async () => {
     console.log('Generating Pokémon JSON file...');
@@ -229,8 +228,6 @@ const generatePokemonJSON = async () => {
 
     // Add pokeDexImg for each Pokémon in the list
     finalPokemonList.forEach(pokemon => {
-        https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif
-        // pokemon.pokeDexImg = `https://img.pokemondb.net/sprites/brilliant-diamond-shining-pearl/normal/${pokemon.name}.png`;
         pokemon.pokeDexImg = `https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif`
     });
 
@@ -269,6 +266,11 @@ const updatePokemonStats = async () => {
                 spDef: Math.floor(Math.random() * 101) + 50,     
                 speed: Math.floor(Math.random() * 81) + 20,     
             };
+
+            // Assign current stats
+            pokemon.stats.currentHp = pokemon.stats.hp;
+            pokemon.stats.currentStr = pokemon.stats.str;
+            pokemon.stats.currentDef = pokemon.stats.def;
 
             await pokemon.save();
             console.log(`Updated ${pokemon.name} with stats:`, pokemon.stats);
