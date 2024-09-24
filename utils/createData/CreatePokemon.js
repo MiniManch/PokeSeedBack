@@ -259,7 +259,7 @@ const updatePokemonStats = async () => {
 
         for (const pokemon of pokemons) {
             pokemon.stats = {
-                hp: Math.floor(Math.random() * 101) + 50,       
+                hp: Math.floor(Math.random() * 501) + 150,       
                 str: Math.floor(Math.random() * 101) + 50,      
                 def: Math.floor(Math.random() * 101) + 50,      
                 spAtk: Math.floor(Math.random() * 101) + 50,     

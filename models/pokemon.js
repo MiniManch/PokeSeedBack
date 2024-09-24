@@ -7,6 +7,7 @@ const moveSchema = new mongoose.Schema({
     dmg: Number,
     acc: Number,
     sp: Number,
+    currentSp:Number,
     effect: String,
     effect_acc: Number,
     effect_percent: Number,
@@ -15,12 +16,14 @@ const moveSchema = new mongoose.Schema({
 
 const statsSchema = new mongoose.Schema({
     str: Number,
+    currentStr:Number,
     hp: Number,
+    currentHp:Number,
     def: Number,
+    currentDef:Number,
     spAtk:Number,
     spDef:Number,
     speed:Number
-
 });
 
 const pokemonSchema = new mongoose.Schema({
