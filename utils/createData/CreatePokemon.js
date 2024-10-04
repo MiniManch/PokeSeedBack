@@ -195,7 +195,7 @@ function assignMovesToPokemon(pokemonList, movesData) {
         // Combine selected normal and type moves
         const selectedMoves = selectedNormalMoves.concat(selectedTypeMoves);
 
-        // Assign the selected moves to the Pokémon
+        // Assign the selected moves to the Pokémon with currentSp equal to sp
         pokemon.moves = selectedMoves.map(move => ({
             name: move.name,
             url: move.url,
@@ -203,6 +203,7 @@ function assignMovesToPokemon(pokemonList, movesData) {
             dmg: move.dmg,
             acc: move.acc,
             sp: move.sp,
+            currentSp: move.sp, // Set currentSp equal to sp
             effect: move.effect || '',
             effect_acc: move.effect_acc || 0,
             effect_percent: move.effect_percent || 0
