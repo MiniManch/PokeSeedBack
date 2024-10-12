@@ -2,7 +2,9 @@ const fs = require('fs');
 const axios = require('axios');
 
 // Load the moves_with_stats JSON file
-const movesWithStats = JSON.parse(fs.readFileSync('./data/moves_with_stats_updated.json', 'utf8'));
+// const movesWithStats = JSON.parse(fs.readFileSync('./data/moves_with_stats_updated.json', 'utf8'));
+const movesWithStats = JSON.parse(fs.readFileSync('./data/updated_moves.json', 'utf8'));
+
 
 // Helper function to generate a random number between min and max
 const getRandomStat = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;

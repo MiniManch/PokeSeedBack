@@ -206,7 +206,8 @@ function assignMovesToPokemon(pokemonList, movesData) {
             currentSp: move.sp, // Set currentSp equal to sp
             effect: move.effect || '',
             effect_acc: move.effect_acc || 0,
-            effect_percent: move.effect_percent || 0
+            effect_percent: move.effect_percent || 0,
+            melt_turns: move.effect === 'melt' ? Math.floor(Math.random() * 3) + 1 : null // Random melt_turns for melt effect, null otherwise
         }));
 
         console.log(`Assigned moves to ${pokemon.name}`);
