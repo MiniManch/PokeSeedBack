@@ -200,7 +200,7 @@ function assignMovesToPokemon(pokemonList, movesData) {
             name: move.name,
             url: move.url,
             type: move.type,
-            dmg: move.dmg,
+            dmg: move.dmg > 50 ? move.dmg : Math.floor(Math.random() * (200 - 50 + 1)) + 50,
             acc: move.acc,
             sp: move.sp,
             currentSp: move.sp, // Set currentSp equal to sp
