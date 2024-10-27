@@ -6,7 +6,8 @@ const MatchSchema = new mongoose.Schema({
   players: [{ type: String, required: true }], // Change to String
   winner: { type: mongoose.Schema.Types.ObjectId, ref: 'Trainer' },
   loser: { type: mongoose.Schema.Types.ObjectId, ref: 'Trainer' },
-  userPlayingAs: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  userPlayingAs: { type: mongoose.Schema.Types.ObjectId, ref: 'Trainer' },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   isHumanPlayerInvolved: { type: Boolean, default: false }
 });
 

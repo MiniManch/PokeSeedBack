@@ -132,9 +132,6 @@ exports.updatePokemonInTeam = async (req, res) => {
     }
 
     const pokemonIndex = user.team.indexOf(oldPokemonName);
-    if (pokemonIndex === -1) {
-      return res.status(400).json({ message: 'Old Pokémon not found in team' });
-    }
 
     // Replace the old Pokémon with the new one
     user.team[pokemonIndex] = newPokemonName;

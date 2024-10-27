@@ -21,4 +21,14 @@ UserSchema.pre('save', async function(next) {
   next();
 });
 
+UserSchema.statics.updateUserStats = async function (userId, didWin) {
+  try {
+    const update = didWin ? { $inc: { wins: 1 } } : { $inc: { losses: 1 } };
+    await this.findByIdAndUpdate(userId, update);
+    return true;
+  } catch (error) {
+    throw new Error('Error updating user stats');
+  }
+};
+
 module.exports = mongoose.model('User', UserSchema, 'User');
