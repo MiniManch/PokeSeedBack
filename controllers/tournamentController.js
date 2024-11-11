@@ -9,6 +9,26 @@ const getNextRoundType= (currentRoundType) => {
   return currentIndex >= 0 && currentIndex < roundsOrder.length - 1 ? roundsOrder[currentIndex + 1] : null;
 }
 
+// Retrieve a tournament by ID or name
+exports.getTournament = async (req, res) => {
+  try {
+    const { id, name } = req.query;
+
+    // Find tournament by either id or name
+    const query = id ? { _id: id } : { name };
+    const tournament = await Tournament.findOne(query);
+
+    if (!tournament) {
+      return res.status(404).json({ message: 'Tournament not found' });
+    }
+
+    res.status(200).json(tournament);
+  } catch (error) {
+    console.error('Error retrieving tournament:', error);
+    res.status(500).json({ message: 'Error retrieving tournament', error });
+  }
+};
+
 const simulateRound = async (tournament, roundType) => {
   // Filter out matches in the current round that do not have a winner yet
   const currentRoundMatches = tournament.matches.filter(
@@ -75,7 +95,6 @@ const simulateRound = async (tournament, roundType) => {
   // Save the updated tournament after the round simulation
   await tournament.save();
 };
-
 
 // Create a new tournament
 exports.createTournament = async (req, res) => {
@@ -166,6 +185,7 @@ exports.createTournament = async (req, res) => {
     res.status(500).json({ message: 'Error creating tournament', error });
   }
 };
+
 // lets change this so it gets the specific game that was played and simulated the rest of that current round
 exports.addMatchResult = async (req, res) => {
   try {
