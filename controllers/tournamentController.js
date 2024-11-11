@@ -11,10 +11,25 @@ const getNextRoundType= (currentRoundType) => {
 
 const simulateRound = async (tournament, roundType) => {
   // Filter out matches in the current round that do not have a winner yet
-  const currentRoundMatches = tournament.matches.filter(m => m.roundType === roundType && !m.winner);
+  const currentRoundMatches = tournament.matches.filter(
+    m => m.roundType === roundType && !m.winner
+  );
+
+  // Find the user match for this round
+  const userMatch = tournament.matches.find(
+    m => m.roundType === roundType && m.isHumanPlayerInvolved
+  );
+
+  if (userMatch && userMatch.winner) {
+    // Manually include the user’s match winner if it exists
+    currentRoundMatches.push(userMatch);
+  }
 
   // Simulate each match in the current round
   for (const match of currentRoundMatches) {
+    // If the match already has a winner (user match), skip simulation
+    if (match.winner) continue;
+
     // Retrieve both trainers for the match
     const [trainer1, trainer2] = await Promise.all([
       PokeTrainer.findOne({ name: match.players[0] }),
@@ -34,23 +49,26 @@ const simulateRound = async (tournament, roundType) => {
     match.loser = loser._id;
   }
 
-  // Determine the next round type and filter for matches in that round that lack a winner
+  // Determine the next round type
   const nextRound = getNextRoundType(roundType);
-  const nextRoundMatches = tournament.matches.filter(m => m.roundType === nextRound && !m.winner);
+  const nextRoundMatches = tournament.matches.filter(
+    m => m.roundType === nextRound && !m.winner
+  );
 
   // Get all winners from the current round
   const previousRoundWinners = currentRoundMatches.map(match => match.winner);
-  console.log('previous round winners',previousRoundWinners)
-  console.log('previous round',currentRoundMatches)
-
 
   // Shuffle winners and assign them to the next round matches
   const shuffledWinners = previousRoundWinners.sort(() => Math.random() - 0.5);
   for (let i = 0; i < shuffledWinners.length; i += 2) {
     if (shuffledWinners[i + 1] && nextRoundMatches[i / 2]) {
       // Assign both players to the match in the next round
-      nextRoundMatches[i / 2].players[0] = (await PokeTrainer.findById(shuffledWinners[i])).name;
-      nextRoundMatches[i / 2].players[1] = (await PokeTrainer.findById(shuffledWinners[i + 1])).name;
+      nextRoundMatches[i / 2].players[0] = (
+        await PokeTrainer.findById(shuffledWinners[i])
+      ).name;
+      nextRoundMatches[i / 2].players[1] = (
+        await PokeTrainer.findById(shuffledWinners[i + 1])
+      ).name;
     }
   }
 
@@ -148,7 +166,7 @@ exports.createTournament = async (req, res) => {
     res.status(500).json({ message: 'Error creating tournament', error });
   }
 };
-
+// lets change this so it gets the specific game that was played and simulated the rest of that current round
 exports.addMatchResult = async (req, res) => {
   try {
     const { tournamentId, matchNumber, winnerName, loserName } = req.body;
@@ -159,6 +177,8 @@ exports.addMatchResult = async (req, res) => {
     const match = tournament.matches.find(m => m._id.toString() === matchNumber);
     if (!match) return res.status(404).json({ message: 'Match not found' });
 
+
+    const roundType = match.roundType;
     const winnerTrainer = await PokeTrainer.findOne({ name: winnerName });
     const loserTrainer = await PokeTrainer.findOne({ name: loserName });
     if (!winnerTrainer || !loserTrainer) {
@@ -168,13 +188,10 @@ exports.addMatchResult = async (req, res) => {
     match.winner = winnerTrainer._id;
     match.loser = loserTrainer._id;
 
+    // Update user stats based on game result.
     if (match.isHumanPlayerInvolved) {
       const user = await User.findById(match.userId);
-      if (winnerTrainer._id.equals(user.trainer)) {
-        await User.updateUserStats(user._id, true);
-      } else {
-        await User.updateUserStats(user._id, false);
-      }
+      await User.updateUserStats(user._id, winnerTrainer._id.equals(user.trainer));
     }
 
     // Simulate the rest of the round
