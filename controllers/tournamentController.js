@@ -88,13 +88,17 @@ const simulateRound = async (tournament, roundType) => {
       nextRoundMatches[i / 2].players[0] = player1.name;
       nextRoundMatches[i / 2].players[1] = player2.name;
 
-      // Fetch userTrainer for this specific match
-      const userTrainer = await User.findById(nextRoundMatches[i / 2].userId).then(
-        user => user?.trainer
-      );
+      // Fetch userTrainer for this specific matc
+      // check for each one of the player names if the are a trainer in the tournament
+      const user = await User.findOne({
+        $or: [{ trainer: player1.name }, { trainer: player2.name }],
+      });
 
-      nextRoundMatches[i / 2].isHumanPlayerInvolved =
-        player1.name === userTrainer || player2.name === userTrainer;
+      if (user){
+        console.log(user.trainer);
+        nextRoundMatches[i / 2].isHumanPlayerInvolved =
+        player1.name === user.trainer || player2.name === user.trainer;
+      }
     }
   }
 
